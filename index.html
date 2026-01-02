@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit & Form - اربح من لياقتك 💰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        
+        .income-badge {
+            display: inline-block;
+            background: #28a745;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #FF5722;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: #E64A19;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.4);
+        }
+        
+        .pricing-section {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card h3 {
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4CD964;
+            margin: 20px 0;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .features li:before {
+            content: "✓ ";
+            color: #4CD964;
+            font-weight: bold;
+        }
+        
+        .products {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .product-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .buy-btn {
+            background: #2196F3;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            font-weight: bold;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFD700;
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .pricing-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏋️ Fit & Form</h1>
+            <p class="tagline">حوّل شغفك باللياقة البدنية إلى دخل شهري مستدام</p>
+            <div class="income-badge">💰 إمكانية ربح تصل إلى $5,000 شهرياً</div>
+            <button class="cta-button" onclick="startEarning()">ابدأ الربح الآن - مجاناً</button>
+            <p>انضم إلى 500+ مدرب يربحون من خبرتهم</p>
+        </header>
+
+        <section class="pricing-section">
+            <div class="pricing-card">
+                <h3>✨ الباقة الأساسية</h3>
+                <div class="price">$29.99/شهر</div>
+                <ul class="features">
+                    <li>موقع شخصي احترافي</li>
+                    <li>5 منتجات رقمية</li>
+                    <li>نظام حجز مواعيد</li>
+                    <li>إحصائيات مفصلة</li>
+                    <li>دعم فني 24/7</li>
+                </ul>
+                <button class="cta-button" onclick="subscribe('basic')">اشترك الآن</button>
+            </div>
+            
+            <div class="pricing-card" style="background: rgba(255, 215, 0, 0.15); border: 2px solid #FFD700;">
+                <h3>⭐ الباقة الاحترافية ⭐</h3>
+                <div class="price">$79.99/شهر</div>
+                <ul class="features">
+                    <li>كل مميزات الأساسية</li>
+                    <li>عدد غير محدود من المنتجات</li>
+                    <li>متجر متكامل</li>
+                    <li>بوابة دفع Stripe & PayPal</li>
+                    <li>تطبيق جوال</li>
+                    <li>استشارات أسبوعية</li>
+                </ul>
+                <button class="cta-button" onclick="subscribe('pro')">الأكثر طلباً</button>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #FFD700;">📚 المنتجات الرقمية الجاهزة للبيع</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>كتاب التغذية الذكية</h3>
+                    <p>150 صفحة شاملة</p>
+                    <div class="price">$24.99</div>
+                    <button class="buy-btn" onclick="buyProduct('nutrition-book')">أضف إلى السلة</button>
+                </div>
+                
+                <div class="product-card">
+                    <h3>برنامج تمارين 90 يوم</h3>
+                    <p>فيديوهات + جداول</p>
+                    <div class="price">$49.99</div>
+                    <button class="buy-btn" onclick="buyProduct('workout-program')">أضف إلى السلة</button>
+                </div>
+                
+                <div class="product-card">
+                    <h3>خطط وجبات أسبوعية</h3>
+                    <p>28 خطة متنوعة</p>
+                    <div class="price">$19.99</div>
+                    <button class="buy-btn" onclick="buyProduct('meal-plans')">أضف إلى السلة</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span>مدرب منضم</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">$250K+</span>
+                <span>إجمالي الأرباح</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span>رضا العملاء</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span>دعم فني</span>
+            </div>
+        </div>
+
+        <section style="text-align: center; padding: 50px 20px;">
+            <h2 style="color: #FFD700; margin-bottom: 20px;">🚀 ابدأ مجاناً اليوم!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">لا تحتاج خبرة تقنية - كل شيء معد لك</p>
+            <button class="cta-button" onclick="startFreeTrial()" style="background: #4CD964; font-size: 1.3rem; padding: 20px 50px;">
+                💸 جرب 14 يوم مجاناً
+            </button>
+            <p style="margin-top: 15px; opacity: 0.8;">لا حاجة لبطاقة ائتمان - ابدأ الآن!</p>
+        </section>
+
+        <footer>
+            <p>© 2024 Fit & Form. كل الحقوق محفوظة.</p>
+            <p style="margin-top: 15px; opacity: 0.7;">تواصل معنا: contact@fitandform.com | +966 50 123 4567</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.6;">موقع مصمم للربح من أول يوم</p>
+        </footer>
+    </div>
+
+    <script>
+        // وظائف الدفع والاشتراك
+        function startEarning() {
+            alert("🎉 أهلًا بك! سنوجهك خطوة بخطوة لبدء الربح من موقعك.");
+            window.scrollTo(0, document.querySelector('.pricing-section').offsetTop);
+        }
+        
+        function subscribe(plan) {
+            const planName = plan === 'basic' ? 'الأساسية ($29.99/شهر)' : 'الاحترافية ($79.99/شهر)';
+            const confirmSub = confirm(`هل تريد الاشتراك في الباقة ${planName}؟\n\nسيتم تحويلك لصفحة الدفع الآمنة.`);
+            
+            if (confirmSub) {
+                // هنا رابط Stripe أو PayPal الحقيقي
+                alert("⚡ جاري تحويلك لبوابة الدفع الآمنة...");
+                // window.location.href = "https://buy.stripe.com/...";
+            }
+        }
+        
+        function buyProduct(product) {
+            const products = {
+                'nutrition-book': {name: 'كتاب التغذية الذكية', price: '$24.99'},
+                'workout-program': {name: 'برنامج تمارين 90 يوم', price: '$49.99'},
+                'meal-plans': {name: 'خطط وجبات أسبوعية', price: '$19.99'}
+            };
+            
+            const selected = products[product];
+            alert(`🛒 أضفت "${selected.name}" إلى سلة التسوق\nالسعر: ${selected.price}\n\nستكمل الشراء في الخطوة التالية.`);
+        }
+        
+        function startFreeTrial() {
+            const email = prompt("📧 أدخل بريدك الإلكتروني لبدء التجربة المجانية 14 يوم:");
+            if (email) {
+                alert(`✅ تم تفعيل التجربة المجانية!\nتم إرسال تفاصيل الدخول إلى ${email}\n\nيمكنك البدء فوراً!`);
+                // في الواقع، هنا نرسل بيانات الدخول للبريد
+            }
+        }
+        
+        // رسالة ترحيب عند فتح الموقع
+        window.onload = function() {
+            console.log("🚀 موقع Fit & Form جاهز للربح!");
+            console.log("💰 إبدأ ببيع منتجاتك الرقمية اليوم!");
+        }
+    </script>
+</body>
+              </html>
